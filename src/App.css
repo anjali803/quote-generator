@@ -80,3 +80,22 @@ body {
   background: #009c51;
   box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.25);
 }
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-container select {
+  width: 253px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #d9d9d9;
+  padding: 0 10px;
+}
+@media (min-width: 768px) {
+  .btn-container {
+    flex-direction: row;
+  }
+}

@@ -9,5 +9,5 @@ const api = axios.create({
 });
 
 export const getQuote = () => api.get("random");
-export const getQuoteWithTag = (tag) => api.get(`quotes?tags=${tag}`);
+export const getQuoteWithTag = (tag) => api.get(`random?limit=1,tags=${tag}`);
 export const getTags = () => api.get("tags");
