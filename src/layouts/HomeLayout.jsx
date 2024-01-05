@@ -5,7 +5,7 @@ const HomeLayout = (props) => {
         <a href="">Home</a>
         <a href="bookmarks">Bookmarks</a>
       </nav>
-      {props.children}
+      <div className="bg">{props.children}</div>
     </div>
   );
 };
