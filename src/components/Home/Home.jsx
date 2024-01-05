@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { getQuote } from "../../axios/index";
+import Bookmark from "../icons/Bookmark";
 
 const Home = () => {
-  const [quotes, setQuotes] = useState([
-    { content: "something", author: "auth" },
-  ]);
+  const [quote, setQuote] = useState({content: "", author:""});
   const [loading, setLoading] = useState(false);
 
   const getQuoteFn = async () => {
@@ -28,23 +27,22 @@ const Home = () => {
       setLoading(false);
       return alert("Something went wrong!");
     }
-    const temp = [...quotes, res];
-    setQuotes(temp);
+    setQuote(res);
     setLoading(false);
   };
 
   return (
-    <div>
-      {quotes &&
-        quotes.length > 0 &&
-        quotes.map((quote) => {
-          return (
-            <div className="quotes" key={quote.content}>
-              {quote.author} - {quote.content}
-            </div>
-          );
-        })}
-      <div>
+    <div className="home">
+      {quote && quote.content.length>0 &&  (
+        <div className="quote">
+          <div className="content">{quote.content}</div>
+          <div className="author">
+            <div>-  {quote.author}</div>
+            <button><Bookmark /></button>
+          </div>
+        </div>
+      )}
+      <div className="btn-container">
         <button className="btn" onClick={onClick}>
           {loading ? "Loading..." : "Next Quote"}
         </button>
