@@ -2,7 +2,7 @@
   font-family: "Poppins", sans-serif !important;
 }
 
-body{
+body {
   background: linear-gradient(256deg, #5e2ab2 2.64%, #161e6c 140.46%);
   color: white;
   height: fit-content;
@@ -22,7 +22,6 @@ body{
   font-size: 1.15rem;
   position: fixed;
   background: linear-gradient(256deg, #5e2ab2 2.64%, #161e6c 140.46%);
-
 }
 .home {
   display: flex;

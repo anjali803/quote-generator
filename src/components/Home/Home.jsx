@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      {quote && quote.content.length > 0 && <Card {...quote} />}
+      {quote && quote.content.length > 0 && <Card {...quote} bookmark />}
       <div className="btn-container">
         <button className="btn" onClick={onClick}>
           {loading ? "Loading..." : "Next Quote"}
