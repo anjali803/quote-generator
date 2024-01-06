@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./Reset.css";
 import Home from "./components/Home/Home.jsx";
 import Bookmarks from "./components/Bookmarks/Bookmarks.jsx";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
