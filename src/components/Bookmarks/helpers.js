@@ -23,9 +23,12 @@ export const addBookmark = (quote) => {
 export const getBookmarks = () => {
   try {
     const bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+    if(bookmarks && bookmarks?.length>0)
     return bookmarks;
   } catch (err) {
+
     console.log(err);
-    return null;
+    
   }
+  return []
 };
